@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UId-Mc-hHc">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hj9-6u-lyN">
+            <objects>
+                <tableViewController id="UId-Mc-hHc" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ETG-og-Nz5">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="9kK-J9-Rpj">
+                            <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptS-2G-Vp2">
+                                    <rect key="frame" x="16" y="0.0" width="86" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="86" id="0Ul-IK-q6p"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="I8z-uN-X9K"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86" id="IqT-Hg-XF6"/>
+                                        <constraint firstAttribute="height" constant="44" id="Lwv-Fe-tos"/>
+                                    </constraints>
+                                    <state key="normal" title="Connect">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="connectButtonPressed:" destination="UId-Mc-hHc" eventType="touchUpInside" id="5vq-Cc-aUQ"/>
+                                    </connections>
+                                </button>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="it0-JK-nHI">
+                                    <rect key="frame" x="193" y="8" width="181" height="29"/>
+                                    <segments>
+                                        <segment title="Active Mode"/>
+                                        <segment title="Idle Mode"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="modeChanged:" destination="UId-Mc-hHc" eventType="valueChanged" id="N4P-pQ-SY0"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="ndr-E1-Mfr">
+                                <cells>
+                                    <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="283" id="17d-j6-0mR">
+                                        <rect key="frame" x="0.0" y="44" width="568" height="283"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="17d-j6-0mR" id="Da0-IM-yPC">
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="282.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="BQj-Kw-c2f">
+                                                    <rect key="frame" x="0.0" y="0.5" width="568" height="282.5"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bX-to-VRQ">
+                                                    <rect key="frame" x="517" y="229" width="30" height="30"/>
+                                                    <state key="normal" image="settingBtn"/>
+                                                    <connections>
+                                                        <segue destination="h7Q-HT-yz4" kind="modal" id="f6g-a8-nMK"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fe-0o-ZAL" userLabel="ButtonLeftRotate">
+                                                    <rect key="frame" x="38" y="69" width="146" height="146"/>
+                                                    <state key="normal" image="button_left"/>
+                                                    <connections>
+                                                        <action selector="offLeftRotate:" destination="UId-Mc-hHc" eventType="touchUpOutside" id="oYH-W5-OvE"/>
+                                                        <action selector="offLeftRotate:" destination="UId-Mc-hHc" eventType="touchUpInside" id="p6q-fZ-732"/>
+                                                        <action selector="onLeftRotate:" destination="UId-Mc-hHc" eventType="touchDown" id="fMI-zD-8NF"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-aP-5AR" userLabel="ButtonRightRotate">
+                                                    <rect key="frame" x="377" y="68" width="146" height="146"/>
+                                                    <state key="normal" title="Button" image="button_right"/>
+                                                    <connections>
+                                                        <action selector="offRightRotate:" destination="UId-Mc-hHc" eventType="touchUpInside" id="NfL-Xz-sbu"/>
+                                                        <action selector="offRightRotate:" destination="UId-Mc-hHc" eventType="touchUpOutside" id="zfH-1v-Sxj"/>
+                                                        <action selector="onRightRotate:" destination="UId-Mc-hHc" eventType="touchDown" id="ikM-gj-TIZ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-Jj-GlQ" userLabel="ButtonAngry">
+                                                    <rect key="frame" x="229" y="28" width="100" height="100"/>
+                                                    <state key="normal" image="tabo_angry"/>
+                                                    <connections>
+                                                        <action selector="setEyeColorAngry:" destination="UId-Mc-hHc" eventType="touchDown" id="Pc4-Ny-aBZ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgJ-f5-sEB" userLabel="ButtonJoy">
+                                                    <rect key="frame" x="229" y="149" width="100" height="100"/>
+                                                    <state key="normal" image="tabo_glad"/>
+                                                    <connections>
+                                                        <action selector="setEyeColorJoy:" destination="UId-Mc-hHc" eventType="touchDown" id="k41-Et-ZBA"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2bX-to-VRQ" secondAttribute="bottom" constant="11" id="5av-Ek-aZO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2bX-to-VRQ" secondAttribute="trailing" constant="15" id="hYD-s0-zV5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2bX-to-VRQ" secondAttribute="bottom" constant="15" id="uOc-bz-ZGT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.78571428570000001" green="0.11971195530000001" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="UId-Mc-hHc" id="eLy-fZ-WCs"/>
+                            <outlet property="delegate" destination="UId-Mc-hHc" id="O6x-LT-K5A"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="buttonLeftRotate" destination="0Fe-0o-ZAL" id="wWm-Df-3Ru"/>
+                        <outlet property="connectButton" destination="ptS-2G-Vp2" id="6f1-Sm-VlQ"/>
+                        <outlet property="selectorMode" destination="it0-JK-nHI" id="pO6-xF-WJc"/>
+                        <outlet property="settingButton" destination="2bX-to-VRQ" id="H7o-aM-2EP"/>
+                        <outlet property="tableView" destination="ETG-og-Nz5" id="6bE-La-mn7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgm-aG-Jut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="43"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="yKh-Hg-MOQ">
+            <objects>
+                <viewController id="h7Q-HT-yz4" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E87-em-Pf8"/>
+                        <viewControllerLayoutGuide type="bottom" id="95R-G6-qX7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HHW-VD-ZhY">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="600" minimumValue="10" maximumValue="4096" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hGm-2I-rS6">
+                                <rect key="frame" x="237" y="183" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changedStepperValue:" destination="h7Q-HT-yz4" eventType="valueChanged" id="tmF-Ao-OL4"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="600" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-rX-eB7">
+                                <rect key="frame" x="170" y="109" width="228" height="51"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="wln-Yz-ndH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="※上げ過ぎるとモーターが正常に動作しなくなる場合があります" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKn-mb-yc5">
+                                <rect key="frame" x="41" y="267" width="486" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="486" id="XM0-4U-A2J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-Kh-pqP">
+                                <rect key="frame" x="388" y="182" width="135" height="30"/>
+                                <state key="normal" title="デフォルト値に戻す"/>
+                                <connections>
+                                    <action selector="onDefaultButton:" destination="h7Q-HT-yz4" eventType="touchUpInside" id="eeu-8x-TgT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="771-xn-Dcx">
+                                <rect key="frame" x="0.0" y="-7" width="568" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TABOのモーター速度設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLP-lm-2PO">
+                                        <rect key="frame" x="129" y="31" width="311" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYC-9n-EKb">
+                                        <rect key="frame" x="502" y="27" width="30" height="30"/>
+                                        <state key="normal" title="決定"/>
+                                        <connections>
+                                            <action selector="onApplyButton:" destination="h7Q-HT-yz4" eventType="touchUpInside" id="ITw-LZ-0lm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="設定範囲：10〜4096" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87z-ay-goH">
+                                <rect key="frame" x="169" y="238" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hGm-2I-rS6" firstAttribute="top" secondItem="yDx-rX-eB7" secondAttribute="bottom" constant="8" id="JoO-Sb-46Y"/>
+                            <constraint firstItem="hGm-2I-rS6" firstAttribute="leading" secondItem="HHW-VD-ZhY" secondAttribute="leadingMargin" constant="217" id="PGy-kY-FYa"/>
+                            <constraint firstItem="95R-G6-qX7" firstAttribute="top" secondItem="rKn-mb-yc5" secondAttribute="bottom" constant="32" id="SGX-qY-Vyq"/>
+                            <constraint firstItem="87z-ay-goH" firstAttribute="leading" secondItem="HHW-VD-ZhY" secondAttribute="leadingMargin" constant="149" id="XBD-SK-1iM"/>
+                            <constraint firstItem="rKn-mb-yc5" firstAttribute="top" secondItem="87z-ay-goH" secondAttribute="bottom" constant="8" id="k7v-t0-OPo"/>
+                            <constraint firstItem="rKn-mb-yc5" firstAttribute="leading" secondItem="HHW-VD-ZhY" secondAttribute="leadingMargin" constant="21" id="rN4-y1-ATD"/>
+                            <constraint firstItem="yDx-rX-eB7" firstAttribute="leading" secondItem="HHW-VD-ZhY" secondAttribute="leadingMargin" constant="150" id="sGM-8Z-U52"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="motorSpeedLabel" destination="yDx-rX-eB7" id="tD7-HD-Vcx"/>
+                        <outlet property="motorStepper" destination="hGm-2I-rS6" id="lIJ-Eg-CBz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cN7-9a-PEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nzE-nU-CP3">
+            <objects>
+                <viewController storyboardIdentifier="BLEViewController" id="qtU-fW-7Gf" customClass="BLEViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTm-VH-d22"/>
+                        <viewControllerLayoutGuide type="bottom" id="SLo-vc-KCA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBI-9P-dQg">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-DT-8Q4">
+                                <rect key="frame" x="0.0" y="55" width="568" height="265"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNj-gH-ig1">
+                                <rect key="frame" x="0.0" y="11" width="568" height="44"/>
+                                <items>
+                                    <navigationItem title="BLEデバイス選択" id="cQK-wB-Pmc">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Jth-AR-Hjz">
+                                            <connections>
+                                                <action selector="pushedBleCancel:" destination="qtU-fW-7Gf" id="XNH-lU-9gt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableBleList" destination="ueE-DT-8Q4" id="bL3-Oc-SHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvJ-rz-tgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="475"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_left" width="279" height="296"/>
+        <image name="button_right" width="279" height="296"/>
+        <image name="settingBtn" width="48" height="48"/>
+        <image name="tabo_angry" width="312" height="327"/>
+        <image name="tabo_glad" width="312" height="327"/>
+        <image name="title" width="2732" height="2048"/>
+    </resources>
+</document>
